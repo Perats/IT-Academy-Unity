@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class ScalerScript : MonoBehaviour
 {
+    private bool isScale = true;
     void Start()
     {
     }
     void Update()
     {
-        transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+        if (isScale)
+        {
+            transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            if (transform.localScale.x > 10) isScale = false;
+        }
+        else
+        {
+            transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+            if (transform.localScale.x < 0.2) isScale = true;
+        }
+        
     }
 }
