@@ -5,7 +5,7 @@ using UnityEngine;
 public class Moment : MonoBehaviour
 {
     // public GameObject prefab;
-    public Dictionary<int, GameObject> PrefabDictionary;
+    public List<GameObject> PrefabList;
 
     public GameObject PingPong;
 
@@ -21,12 +21,12 @@ public class Moment : MonoBehaviour
 
     void Start()
     {
-        PrefabDictionary = new Dictionary<int, GameObject>()
+        PrefabList = new List<GameObject>(4)
         {
-            [1] = PingPong,
-            [2] = Rotator,
-            [3] = Teleport,
-            [4] = Scaler
+            PingPong,
+            Rotator,
+            Teleport,
+            Scaler
         };
     }
 
@@ -35,10 +35,11 @@ public class Moment : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject currentPrefab = PrefabDictionary[Random.Range(1, 5)];
+            GameObject currentPrefab = PrefabList[Random.Range(0, 4)];
             if (currentPrefab == null)
             {
                 Debug.LogError("Prefab is not null");
+                return;
             }
             if (instance != null)
             {
