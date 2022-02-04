@@ -1,29 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PingPongScript : MonoBehaviour
 {
     public float speed = 5.0f;
 
-    private Vector3 direction = new Vector3(1.0f, 0.0f, 0.0f);
-
-    private bool moveForvard = true;
+    private Vector3 endPosition;
     void Start()
     {
+        endPosition = new Vector3(Random.Range(0f, 5f), Random.Range(0f, 5f), Random.Range(0f, 5f));
     }
 
     void Update()
     {
-        if (moveForvard)
+        transform.position = Vector3.MoveTowards(transform.position, endPosition, speed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, endPosition) < 0.001f)
         {
-            transform.position = transform.position + direction * speed * Time.deltaTime;
-            if (transform.position.x > 20) moveForvard = false;
-        }
-        else
-        {
-            transform.position = transform.position - direction * speed * Time.deltaTime;
-            if (transform.position.x < 0) moveForvard = true;
+            endPosition *= -1.0f;
         }
     }
 }
