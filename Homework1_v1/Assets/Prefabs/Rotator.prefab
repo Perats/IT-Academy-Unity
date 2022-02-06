@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7240518613882348254}
   - component: {fileID: 9064230815198259445}
   - component: {fileID: -8859360045378816678}
-  - component: {fileID: 4879335315804074565}
+  - component: {fileID: 2922279107506053230}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: Untagged
@@ -104,17 +104,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5995480190860673759}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de06e97f1fe58d94294b366b56bde42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrefabList: []
   PingPong: {fileID: 0}
   Rotator: {fileID: 0}
   Teleport: {fileID: 0}
   Scaler: {fileID: 0}
   speed: 2
---- !u!114 &4879335315804074565
+--- !u!114 &2922279107506053230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

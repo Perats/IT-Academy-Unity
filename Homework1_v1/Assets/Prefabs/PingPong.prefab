@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4488815433395455143}
   - component: {fileID: 8258714351999193817}
   - component: {fileID: 3545797596734040157}
-  - component: {fileID: -8142983889547267161}
+  - component: {fileID: 4921859555344959433}
   m_Layer: 0
   m_Name: PingPong
   m_TagString: Untagged
@@ -96,7 +96,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8142983889547267161
+--- !u!114 &4921859555344959433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3be31971746304b84e9e56ad4cd798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5

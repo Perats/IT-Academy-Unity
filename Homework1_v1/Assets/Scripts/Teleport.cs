@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class TeleportScript : MonoBehaviour
+public class Teleport : MonoBehaviour
 {
-    private float timer = 0.0f;
-    private float randomTime = 0.0f;
+    private float _timer = 0.0f;
+    private float _randomTime = 0.0f;
 
     void Start()
     {
@@ -14,12 +14,12 @@ public class TeleportScript : MonoBehaviour
 
     void Update()
     {
-        if (timer > randomTime)
+        if (_timer > _randomTime)
         {
             transform.position = new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f));
-            randomTime = Random.Range(1.0f, 5.0f);
-            timer = 0.0f;
+            _randomTime = Random.Range(1.0f, 5.0f);
+            _timer = 0.0f;
         }
-        timer += Time.deltaTime;
+        _timer += Time.deltaTime;
     }
 }
