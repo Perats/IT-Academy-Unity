@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637796577046788404
-    m_Hash: 2497598862
+      ticks: 637799474283848887
+    m_Hash: 4250453251
   m_LockFileStatus:
     m_FilePath: C:/Users/aleks/Documents/GitHub/IT-Academy-Unity/Homework2_1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637796577047027646
-    m_Hash: 1817182986
+      ticks: 637799474283858858
+    m_Hash: 4165302134
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
