@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Dropdown : MonoBehaviour, IPointerDownHandler
+public class Dropdown : MonoBehaviour
 {
     public Text subTitle;
-    public void OnPointerDown(PointerEventData eventData)
+    public TMPro.TMP_Dropdown dropDown;
+    public void GetChangedValue()
     {
-        subTitle.text = gameObject.name.Substring(8);
+        subTitle.text = dropDown.options[dropDown.value].text;
     }
 }
