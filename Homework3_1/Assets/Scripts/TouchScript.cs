@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TouchScript : MonoBehaviour
 {
-  
     [SerializeField] public PlainesController plainesList;
     private float width;
     private float height;
@@ -20,18 +19,22 @@ public class TouchScript : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-           
-            foreach (var activePlaine in plainesList.planesList)
+            if (300 < touch.position.y && touch.position.y < 1100)
             {
-                if (activePlaine.active)
+                foreach (var activePlaine in plainesList.planesList)
                 {
-                    Vector3 pos = touch.position;
-                    pos.x = (pos.x - width) ;
-                    pos.y = (pos.y - height);
-                    var touchRotation = Quaternion.Euler(pos.x, pos.y, pos.z);
-                    activePlaine.transform.rotation = touchRotation;
+                    if (activePlaine.active)
+                    {
+                        Vector3 pos = touch.position;
+                        pos.x = (pos.x - width);
+                        pos.y = (pos.y - height);
+                        var touchRotation = Quaternion.Euler(pos.x, pos.y, pos.z);
+                        activePlaine.transform.rotation = touchRotation;
+                    }
                 }
+               
             }
+           
         }
     }
 }

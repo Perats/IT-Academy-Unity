@@ -30,10 +30,10 @@ public class ChangeColor : MonoBehaviour
         }
         foreach (var activePlaine in plainesList.planesList)
         {
-            if (activePlaine.active)
+            if (activePlaine.activeSelf)
             {
-                var a = activePlaine.GetComponents<MeshRenderer>();
-                a[0].material.color = currentColor;
+                var getMeshData = activePlaine.GetComponents<MeshRenderer>();
+                getMeshData[0].material.color = currentColor;
             }
         }
     }
