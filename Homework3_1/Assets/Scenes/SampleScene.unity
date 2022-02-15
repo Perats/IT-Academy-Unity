@@ -1030,13 +1030,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 482847925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70732d4bc9b2d4945850fb3c7b68df33, type: 3}
+  m_Script: {fileID: 11500000, guid: ba4cf3b261a676247b47c142e7330fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plain1: {fileID: 0}
-  plain2: {fileID: 0}
-  plain3: {fileID: 0}
-  plain7: {fileID: 0}
+  plainesList: {fileID: 1267728838}
 --- !u!1 &483288861
 GameObject:
   m_ObjectHideFlags: 0
