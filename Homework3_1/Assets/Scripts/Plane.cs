@@ -10,14 +10,5 @@ public class Plane : MonoBehaviour
     public GameObject plain3;
     public GameObject plain7;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

@@ -5,28 +5,55 @@ using UnityEngine.UI;
 
 public class SlideAction : MonoBehaviour
 {
-    private Button _slideLeft;
-    private Button _slideRight;
+    public Button slide;
+    [SerializeField]
+    private GameObject[] _arrayOfPlanes;
+    int currentNumber = 0;
+    int updatedcurrent;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowNextPlane(bool value)
     {
         if (Input.touchCount > 0)
         {
-            print("ther is a touch");
-
             if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                print("Touch has Began");
             }
             if (Input.GetTouch(0).phase == TouchPhase.Ended)
             {
-                print("Touch has Ended");
+                _arrayOfPlanes[currentNumber].SetActive(false);
+                if (value)
+                {
+                    if (currentNumber == _arrayOfPlanes.Length - 1)
+                    {
+                        _arrayOfPlanes[0].SetActive(true);
+                        currentNumber = 0;
+                    }
+                    else
+                    {
+                        currentNumber++;
+                        _arrayOfPlanes[currentNumber].SetActive(true);
+                    }
+                }
+                else
+                {
+
+                    if (currentNumber == 0)
+                    {
+                        _arrayOfPlanes[_arrayOfPlanes.Length - 1].SetActive(true);
+                        currentNumber = _arrayOfPlanes.Length - 1;
+                    }
+                    else
+                    {
+                        currentNumber--;
+                        _arrayOfPlanes[currentNumber].SetActive(true);
+                    }
+
+                }
+
             }
         }
     }
