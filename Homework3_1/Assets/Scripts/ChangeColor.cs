@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ChangeColor : MonoBehaviour
 {
     public Button buttonColor;
-    [SerializeField] public PlainesController plainesList;
+    [SerializeField] PlainesController plainesList;
     private Color currentColor;
 
     public void ChangePlainColor(int colorValue)

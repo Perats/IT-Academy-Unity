@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 439666248}
-  cameraTest: {fileID: 2059091422}
+  secondCamera: {fileID: 2059091422}
 --- !u!1 &482847925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 487946948}
-  cameraTest: {fileID: 2059091422}
+  secondCamera: {fileID: 2059091422}
 --- !u!1 &532082680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1369557936}
-  cameraTest: {fileID: 2059091422}
+  secondCamera: {fileID: 2059091422}
 --- !u!1 &1648322565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,7 +3518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1763324583}
-  cameraTest: {fileID: 2059091422}
+  secondCamera: {fileID: 2059091422}
 --- !u!1 &1881517638
 GameObject:
   m_ObjectHideFlags: 0

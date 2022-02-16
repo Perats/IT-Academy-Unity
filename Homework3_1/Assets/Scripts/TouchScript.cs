@@ -26,9 +26,9 @@ public class TouchScript : MonoBehaviour
                     if (activePlaine.active)
                     {
                         Vector3 pos = touch.position;
-                        pos.x = (pos.x - width);
+                       // pos.x = (pos.x - width);
                         pos.y = (pos.y - height);
-                        var touchRotation = Quaternion.Euler(pos.x, pos.y, pos.z);
+                        var touchRotation = Quaternion.Euler(0.0f, pos.y, 0.0f);
                         activePlaine.transform.rotation = touchRotation;
                     }
                 }
