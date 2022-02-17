@@ -8,14 +8,15 @@ public class Character : MonoBehaviour
     public float speed = 10.0f;
     public float jumpSpeed = 200.0f;
     CharacterController controller;
-    private Camera camera;
+    private Camera cameraMain;
+    private float rotationY;
 
     public CharacterController Controller { get { return controller = controller ?? GetComponent<CharacterController>(); } }
 
     // Start is called before the first frame update
     void Start()
     {
-        camera = Camera.main;
+        cameraMain = Camera.main;
     }
 
     // Update is called once per frame
@@ -24,13 +25,18 @@ public class Character : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
         float rotationX = Input.GetAxis("Mouse X");
-        float rotationY = Input.GetAxis("Mouse Y");
 
         Vector3 movement = new Vector3(horizontal*speed, gravity,vertical*speed);
         if (Input.GetKeyDown(KeyCode.Space)) movement.y = jumpSpeed;
         if (movement.y > gravity) movement.y += gravity * Time.deltaTime;
         Controller.Move(transform.TransformDirection(movement) * Time.deltaTime);
         Controller.transform.Rotate(Vector3.up, rotationX);
-        camera.transform.Rotate(Vector3.right, -rotationY);
+        // camera.transform.Rotate(Vector3.right, -rotationY);
+
+        rotationY += Input.GetAxis("Mouse Y");
+        rotationY = Mathf.Clamp(rotationY, -20, 20);
+        var euler = cameraMain.transform.localEulerAngles;
+        euler.x = rotationY;
+        cameraMain.transform.localEulerAngles = euler;
     }
 }
