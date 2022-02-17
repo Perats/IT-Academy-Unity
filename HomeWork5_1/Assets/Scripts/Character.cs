@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public float gravity = -9.81f;
     public float speed = 10.0f;
-    public float jumpSpeed = 5.0f;
+    public float jumpSpeed = 200.0f;
     CharacterController controller;
     private Camera camera;
 
@@ -25,15 +25,12 @@ public class Character : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float rotationX = Input.GetAxis("Mouse X");
         float rotationY = Input.GetAxis("Mouse Y");
-        
 
         Vector3 movement = new Vector3(horizontal*speed, gravity,vertical*speed);
         if (Input.GetKeyDown(KeyCode.Space)) movement.y = jumpSpeed;
+        if (movement.y > gravity) movement.y += gravity * Time.deltaTime;
         Controller.Move(transform.TransformDirection(movement) * Time.deltaTime);
-
-       
         Controller.transform.Rotate(Vector3.up, rotationX);
-       //rotateout
         camera.transform.Rotate(Vector3.right, -rotationY);
     }
 }
