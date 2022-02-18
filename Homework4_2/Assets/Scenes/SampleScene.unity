@@ -1044,7 +1044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921801877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.5, y: 10, z: -26.5}
+  m_LocalPosition: {x: 33.5, y: 8.9, z: -26.5}
   m_LocalScale: {x: 30, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 1583885150}
@@ -1560,8 +1560,7 @@ MonoBehaviour:
   pingPongPlace: {fileID: 1869062630}
   bullet: {fileID: 4918319641697552063, guid: d86876a6e99d9ab4fbf2e4fbfb339ae9, type: 3}
   granade: {fileID: 420046227910294298, guid: 149c540c51e417b4ca80b818e33babe9, type: 3}
-  pingPong: {fileID: 5257631908446545074, guid: 1430e393bc40dce43b3ed38e3ed2c537, type: 3}
-  currentWeapon: {fileID: 0}
+  pingPong: {fileID: 3444483640209918232, guid: 52f1bbdfdbdbc6543a76defc2ba59f17, type: 3}
 --- !u!54 &1437475145
 Rigidbody:
   m_ObjectHideFlags: 0
