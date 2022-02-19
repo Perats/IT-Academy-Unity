@@ -1553,7 +1553,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   rotationSpeed: 3
-  shootForce: 60
   bulletPlace: {fileID: 1585157541}
   granadePlace: {fileID: 1706608335}
   plantPlace: {fileID: 1407775040}
