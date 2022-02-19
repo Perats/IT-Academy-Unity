@@ -16,9 +16,9 @@ public class Grenede : MonoBehaviour
             if (getBody != null)
             {
                 getBody.AddExplosionForce(force, transform.position, radius);
-                Destroy(gameObject);
             }
         }
+        Destroy(gameObject);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -26,6 +26,10 @@ public class Grenede : MonoBehaviour
         if (collision.collider.name == "Target")
         {
             Boom();
+        } else
+        if (collision.collider.name == "Wall")
+        {
+            Destroy(gameObject);
         }
     }
 }

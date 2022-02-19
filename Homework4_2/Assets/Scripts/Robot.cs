@@ -6,7 +6,7 @@ public class Robot : MonoBehaviour
 {
     public float movementSpeed;
     public float rotationSpeed;
-    public float shootForce;
+    private float shootForce = 30f;
 
 
     public GameObject bulletPlace;
@@ -30,7 +30,7 @@ public class Robot : MonoBehaviour
     {
         moveRobot();
 
-        if (weaponOnRobot != null && Input.GetKeyDown("space"))
+        if (weaponOnRobot != null && Input.GetKeyDown(KeyCode.Space))
         {
             Fire(weaponOnRobot);
         }
@@ -38,13 +38,16 @@ public class Robot : MonoBehaviour
 
     void Fire(GameObject weaponOnRobot)
     {
-        if (weaponOnRobot != null)
+        GameObject newFireObject = Instantiate(weaponOnRobot, robot.transform.position, robot.transform.rotation) as GameObject;
+        Rigidbody rigidBody = newFireObject.GetComponent<Rigidbody>();
+        rigidBody.AddForce(rigidBody.transform.forward * shootForce, ForceMode.Impulse);
+        if (weaponOnRobot.name == "Ping")
         {
-            GameObject newFireObject = Instantiate(weaponOnRobot, robot.transform.position, robot.transform.rotation) as GameObject;
-            Rigidbody rigidBody = newFireObject.GetComponent<Rigidbody>();
-            rigidBody.AddForce(rigidBody.transform.forward * shootForce, ForceMode.Impulse);
-            if (weaponOnRobot == pingPong) Destroy(rigidBody, 6f);
-            else Destroy(rigidBody, 1f);
+            Destroy(newFireObject, 5f);
+        }
+        else
+        {
+            Destroy(newFireObject, 1f);
         }
     }
 
@@ -71,7 +74,6 @@ public class Robot : MonoBehaviour
 
     void changeWeaponForPlace(GameObject weapon)
     {
-        Destroy(weaponOnRobot);
         weaponOnRobot = weapon;
     }
 
