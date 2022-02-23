@@ -46,29 +46,31 @@ public class Character : MonoBehaviour
             Defend();
             Jump();
             Attack();
-
-            if (!Controller.isGrounded)
-            {
-                speedY += gravity * Time.deltaTime;
-            }
-            else if (speedY < 0.0f)
-            {
-                speedY = 0.0f;
-            }
-            CharacterAnimation.SetFloat("SpeedY", speedY / jumpSpeed);
-            if (isJumping && speedY < 0.0f)
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f, LayerMask.GetMask("Default")))
-                {
-                    isJumping = false;
-                    CharacterAnimation.SetTrigger("Land");
-                }
-            }
+            Landing();
         }
         Alive();
     }
-
+    void Landing()
+    {
+        if (!Controller.isGrounded)
+        {
+            speedY += gravity * Time.deltaTime;
+        }
+        else if (speedY < 0.0f)
+        {
+            speedY = 0.0f;
+        }
+        CharacterAnimation.SetFloat("SpeedY", speedY / jumpSpeed);
+        if (isJumping && speedY < 0.0f)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f, LayerMask.GetMask("Default")))
+            {
+                isJumping = false;
+                CharacterAnimation.SetTrigger("Land");
+            }
+        }
+    }
     void Attack()
     {
         if (Input.GetMouseButton(0))
