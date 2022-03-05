@@ -19,6 +19,7 @@ public class Character : MonoBehaviour
     bool isJumping = false;
     float jumpSpeed = 7.0f;
     bool isDead = false;
+    bool isSpawnd = false;
     public CharacterController Controller
     {
         get { return controller = controller ?? GetComponent<CharacterController>(); }
@@ -36,7 +37,7 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        if (!isDead)
+        if (!isDead && isSpawnd)
         {
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");
@@ -49,6 +50,9 @@ public class Character : MonoBehaviour
             Landing();
         }
         Alive();
+    }
+    void Spawn() {
+        isSpawnd = true;
     }
     void Landing()
     {
