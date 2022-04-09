@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 420046227910294295}
   - component: {fileID: 3618263941781441570}
   - component: {fileID: 7130964532009705020}
-  m_Layer: 0
+  - component: {fileID: 5519765205033966934}
+  m_Layer: 7
   m_Name: Granade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273a8774a73bf754db4c8e93e1b2bdab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
-  force: 700
+  explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
 --- !u!54 &7130964532009705020
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +128,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5519765205033966934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420046227910294298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad9b2437b2b7c64b9497b4b6f50f18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
