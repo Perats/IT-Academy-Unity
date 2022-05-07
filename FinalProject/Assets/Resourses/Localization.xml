@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Keys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Key Name="Shop_Key">
+		<Translates>
+			<en>Shop</en>
+			<ru>Магазин</ru>
+		</Translates>
+	</Key>
+	<Key Name="Play_Key">
+		<Translates>
+			<en>Play</en>
+			<ru>Играть</ru>
+		</Translates>
+	</Key>
+	<Key Name="Options_Key">
+		<Translates>
+			<en>Options</en>
+			<ru>Опции</ru>
+		</Translates>
+	</Key>
+	<Key Name="Sound_Key">
+		<Translates>
+			<en>Sound</en>
+			<ru>Звук</ru>
+		</Translates>
+	</Key>
+	<Key Name="Language_Key">
+		<Translates>
+			<en>Language</en>
+			<ru>Язык</ru>
+		</Translates>
+	</Key>
+	<Key Name="Levels_Key">
+		<Translates>
+			<en>Levels</en>
+			<ru>Уровни</ru>
+		</Translates>
+	</Key>
+	<Key Name="LevelComplite_Key">
+		<Translates>
+			<en>Level Complite</en>
+			<ru>Уровень пройден</ru>
+		</Translates>
+	</Key>
+	<Key Name="Scrore_Key">
+		<Translates>
+			<en>Score</en>
+			<ru>Счет</ru>
+		</Translates>
+	</Key>
+	<Key Name="Next_Key">
+		<Translates>
+			<en>Next</en>
+			<ru>Далее</ru>
+		</Translates>
+	</Key>
+	<Key Name="Pause_Key">
+		<Translates>
+			<en>Pause</en>
+			<ru>Пауза</ru>
+		</Translates>
+	</Key>
+	<Key Name="Menu_Key">
+		<Translates>
+			<en>Menu</en>
+			<ru>Меню</ru>
+		</Translates>
+	</Key>
+	<Key Name="AddTime_Key">
+		<Translates>
+			<en>Add Time</en>
+			<ru>Больше Времени</ru>
+		</Translates>
+	</Key>
+	<Key Name="Retry_Key">
+		<Translates>
+			<en>Retry</en>
+			<ru>Повторить</ru>
+		</Translates>
+	</Key>
+	<Key Name="Resume_Key">
+		<Translates>
+			<en>Resume</en>
+			<ru>Продолжить</ru>
+		</Translates>
+	</Key>
+	<Key Name="LevelFailed_Key">
+		<Translates>
+			<en>Level Failed</en>
+			<ru>Уровень провален</ru>
+		</Translates>
+	</Key>
+	<Key Name="Buy_Key">
+		<Translates>
+			<en>Buy</en>
+			<ru>Купить</ru>
+		</Translates>
+	</Key>
+	<Key Name="Item_Buy">
+		<Translates>
+			<en>This skin is your's</en>
+			<ru>Вы купили скин</ru>
+		</Translates>
+	</Key>
+</Keys>
