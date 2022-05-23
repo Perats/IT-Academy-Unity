@@ -1,10 +1,8 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
+public class RewardedAds : Singleton<RewardedAds>, IUnityAdsLoadListener, IUnityAdsShowListener
 {
-    public static RewardedAds S;
-
     [SerializeField] private string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] private string _iOSAdUnitId = "Rewarded_iOS";
 
@@ -12,25 +10,19 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
     void Awake()
     {
-        S = this;
-
-        // Get the Ad Unit ID for the current platform:
         _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)
             ? _iOSAdUnitId
             : _androidAdUnitId;
     }
 
-    // Load content to the Ad Unit:
     public void LoadAd()
     {
-        // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }
 
     public void ShowAd()
     {
-        // Then show the ad:
         Advertisement.Show(_adUnitId, this);
     }
 
@@ -39,10 +31,7 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
-            // Grant a reward.
-            GameManager.AdsReward();
-
-            // Load another ad:
+            GameManager.Instance.AdsReward();
             Advertisement.Load(_adUnitId, this);
         }
     }

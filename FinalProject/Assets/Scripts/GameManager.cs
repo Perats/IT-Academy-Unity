@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static ShopManager;
 
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
     private Sprite _cardBackSprite;
+
+    [SerializeField]
+    private List<Skin> _skins = new List<Skin>();
 
     [SerializeField]
     private GameObject _levelCompliteMenu;
@@ -21,8 +26,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private LevelManager _levelManager;
 
-    [SerializeField]
-    private SceneManager _sceneManager;
+    //[SerializeField]
+    //private SceneManager _sceneManager;
 
     [SerializeField]
     private CoinManager _coinManager;
@@ -38,17 +43,17 @@ public class GameManager : Singleton<GameManager>
 
     public List<Button> cards = new List<Button>();
 
-    private bool firstCorrect, secondCorrect;
-    private int firstCorrectIndex, secondCorrectIndex;
+    private bool _firstGuess, _secondGuess;
+    private int _firstGuessIndex, _secondGuessIndex;
 
-    private int countCorrect;
-    private int gameGuess = 0;
-    private int countCorrectGuess;
-    public int level;
-    public static int coins;
+    private int _activeSkinId;
+    private int _gameGuess = 0;
+    private int _countCorrectGuess;
+    private static int _coins;
     private int _difficulty;
-
     private string firstGuess, secondGuess;
+
+    private Skin _skinData;
     void Awake()
     {
         _levelManager = GetComponent<LevelManager>();
@@ -56,15 +61,16 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        InterstitialAd.S.LoadAd();
-        RewardedAds.S.LoadAd();
+        InterstitialAd.Instance.LoadAd();
+        RewardedAds.Instance.LoadAd();
         _difficulty = _saveManager.PlayerStats.UnlockedLevelsCount;
         CreateField(_difficulty);
         GetCards();
         AddListeners();
         AddCardFaces();
-        gameGuess = gamePuzzles.Count / 2;
-        coins = _coinManager.coins;
+        _gameGuess = gamePuzzles.Count / 2;
+        _coins = _coinManager.coins;
+        _activeSkinId = _saveManager.PlayerStats.ActiveSkinId;
     }
 
     private void CreateField(int difficulty)
@@ -121,35 +127,35 @@ public class GameManager : Singleton<GameManager>
     void GetCards()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("Card");
+        _skinData = _skins.First(i => i.id == _activeSkinId);
         for (int i = 0; i < objects.Length; i++)
         {
             cards.Add(objects[i].GetComponent<Button>());
-            cards[i].image.sprite = _cardBackSprite;
+            cards[i].image.sprite = _skinData.cardSkin;
         }
     }
 
     void ShowFace(string name)
     {
-        if (!firstCorrect)
+        if (!_firstGuess)
         {
-            firstCorrect = true;
-            firstCorrectIndex = int.Parse(name);
-            firstGuess = gamePuzzles[firstCorrectIndex].name;
-            cards[firstCorrectIndex].image.sprite = gamePuzzles[firstCorrectIndex];
+            _firstGuess = true;
+            _firstGuessIndex = int.Parse(name);
+            firstGuess = gamePuzzles[_firstGuessIndex].name;
+            cards[_firstGuessIndex].image.sprite = gamePuzzles[_firstGuessIndex];
         }
         else
         {
-            secondCorrect = true;
-            secondCorrectIndex = int.Parse(name);
-            secondGuess = gamePuzzles[secondCorrectIndex].name;
-            cards[secondCorrectIndex].image.sprite = gamePuzzles[secondCorrectIndex];
+            _secondGuess = true;
+            _secondGuessIndex = int.Parse(name);
+            secondGuess = gamePuzzles[_secondGuessIndex].name;
+            cards[_secondGuessIndex].image.sprite = gamePuzzles[_secondGuessIndex];
         }
-        if (secondCorrect && firstCorrect)
+        if (_secondGuess && _firstGuess)
         {
-            BlockCards(firstCorrectIndex, secondCorrectIndex);
+            BlockCards(_firstGuessIndex, _secondGuessIndex);
+            StartCoroutine(CheckMatch());
         }
-
-        StartCoroutine(CheckMatch());
     }
 
     IEnumerator CheckMatch()
@@ -158,25 +164,22 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(2f);
         if (firstGuess == secondGuess)
         {
-            cards[firstCorrectIndex].interactable = false;
-            cards[secondCorrectIndex].interactable = false;
+            cards[_firstGuessIndex].interactable = false;
+            cards[_secondGuessIndex].interactable = false;
 
-            cards[firstCorrectIndex].image.color = new Color(0, 0, 0, 0);
-            cards[secondCorrectIndex].image.color = new Color(0, 0, 0, 0);
-            firstCorrect = secondCorrect = false;
+            cards[_firstGuessIndex].image.color = new Color(0, 0, 0, 0);
+            cards[_secondGuessIndex].image.color = new Color(0, 0, 0, 0);
+            _firstGuess = _secondGuess = false;
             UnblockCards();
-            //firstCorrect = secondCorrect = false;
             CheckGameFinish();
         }
         else
         {
-            cards[firstCorrectIndex].image.sprite = _cardBackSprite;
-            cards[secondCorrectIndex].image.sprite = _cardBackSprite;
+            cards[_firstGuessIndex].image.sprite = _skinData.cardSkin;
+            cards[_secondGuessIndex].image.sprite = _skinData.cardSkin;
             UnblockCards();
         }
-
-        firstCorrect = secondCorrect = false;
-
+        _firstGuess = _secondGuess = false;
     }
 
     private void BlockCards(int firstCorrectIndex, int secondCorrectIndex)
@@ -196,13 +199,12 @@ public class GameManager : Singleton<GameManager>
         {
             item.interactable = true;
         }
-
     }
 
     private void CheckGameFinish()
     {
-        countCorrectGuess++;
-        if (countCorrectGuess == gameGuess)
+        _countCorrectGuess++;
+        if (_countCorrectGuess == _gameGuess)
         {
             _levelCompliteMenu.SetActive(true);
 
@@ -210,19 +212,10 @@ public class GameManager : Singleton<GameManager>
             _saveManager.PlayerStats.UnlockedLevelsCount++;
             _levelManager.RecalculateUnlockLevels();
             _saveManager.SaveStats();
-            // _sceneManager.OpenNextScene();
-            //  спрайты в атлас!
-
         }
     }
 
-    public static void AdsReward()
-    {
-        coins += 100;
-
-    }
-
-    private void SaveCoins()
+    public void AdsReward()
     {
         _saveManager.PlayerStats.CoinsAmmount += 100;
     }

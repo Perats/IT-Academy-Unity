@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
-public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
+public class RewardedAdsButton : Singleton<RewardedAdsButton>, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     [SerializeField] private Button _showAdButton;
 
@@ -77,7 +77,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
-            GameManager.AdsReward();
+           // GameManager.Instance.AdsReward();
 
             // Load another ad:
             Advertisement.Load(_adUnitId, this);

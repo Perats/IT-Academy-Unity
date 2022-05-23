@@ -6,36 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Escape))
-    //    {
-    //        if (GameIsPaused)
-    //        {
-    //            Resume();
-    //        }
-    //        else
-    //        {
-    //            Pause();
-    //        }
-    //    }
-    //}
+    private static bool _gameIsPaused = false;
+    [SerializeField]
+    private GameObject _pauseMenuUI;
 
     public void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        _pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        _gameIsPaused = true;
     }
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        _pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        _gameIsPaused = false;
     }
 
     public void LoadMenu()
@@ -47,5 +33,4 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
- 
 }

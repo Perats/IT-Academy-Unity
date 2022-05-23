@@ -42,7 +42,7 @@
 			<ru>Уровень пройден</ru>
 		</Translates>
 	</Key>
-	<Key Name="Scrore_Key">
+	<Key Name="Score_Key">
 		<Translates>
 			<en>Score</en>
 			<ru>Счет</ru>
@@ -90,10 +90,23 @@
 			<ru>Уровень провален</ru>
 		</Translates>
 	</Key>
+
 	<Key Name="Buy_Key">
 		<Translates>
 			<en>Buy</en>
 			<ru>Купить</ru>
+		</Translates>
+	</Key>
+		<Key Name="Double_Key">
+		<Translates>
+			<en>Double Coins</en>
+			<ru>Удвоить</ru>
+		</Translates>
+	</Key>
+		<Key Name="Score_Key">
+		<Translates>
+			<en>Score:</en>
+			<ru>Счет:</ru>
 		</Translates>
 	</Key>
 	<Key Name="Item_Buy">

@@ -596,7 +596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -1285}
+  m_AnchoredPosition: {x: 400, y: -1405}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148878327
@@ -658,11 +658,11 @@ MonoBehaviour:
       - m_Target: {fileID: 148878327}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 17
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -939,7 +939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &189954290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1681,7 +1681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -835}
+  m_AnchoredPosition: {x: 400, y: -955}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338220538
@@ -1743,11 +1743,11 @@ MonoBehaviour:
       - m_Target: {fileID: 338220538}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1827,7 +1827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 925, y: -610}
+  m_AnchoredPosition: {x: 925, y: -730}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437479494
@@ -1889,11 +1889,11 @@ MonoBehaviour:
       - m_Target: {fileID: 437479494}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2056,7 +2056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 575, y: -1285}
+  m_AnchoredPosition: {x: 575, y: -1405}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &558453462
@@ -2118,11 +2118,11 @@ MonoBehaviour:
       - m_Target: {fileID: 558453462}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 18
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2343,7 +2343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -835}
+  m_AnchoredPosition: {x: 225, y: -955}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652834112
@@ -2405,11 +2405,11 @@ MonoBehaviour:
       - m_Target: {fileID: 652834112}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2714,7 +2714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -1060}
+  m_AnchoredPosition: {x: 400, y: -1180}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744521669
@@ -2776,11 +2776,11 @@ MonoBehaviour:
       - m_Target: {fileID: 744521669}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3235,7 +3235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 575, y: -1060}
+  m_AnchoredPosition: {x: 575, y: -1180}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842842068
@@ -3297,11 +3297,11 @@ MonoBehaviour:
       - m_Target: {fileID: 842842068}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 13
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3457,7 +3457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 750, y: -1285}
+  m_AnchoredPosition: {x: 750, y: -1405}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860496724
@@ -3519,11 +3519,11 @@ MonoBehaviour:
       - m_Target: {fileID: 860496724}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 19
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3756,7 +3756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &982469379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3779,8 +3779,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0043945, y: -0.0005187988}
-  m_SizeDelta: {x: 3.1672, y: 5.6305}
+  m_AnchoredPosition: {x: 0.0043945, y: -0.00048828}
+  m_SizeDelta: {x: 3.1672, y: 6.3343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982469380
 MonoBehaviour:
@@ -3809,9 +3809,9 @@ MonoBehaviour:
     id: 2
   _coinManager: {fileID: 1231730255}
   _saveManager: {fileID: 1231730256}
-  shopItem: {fileID: 7326415536486114620, guid: 7f264dc145b2dc641af834f19ab0c474, type: 3}
+  _shopItem: {fileID: 7326415536486114620, guid: 7f264dc145b2dc641af834f19ab0c474, type: 3}
   _cardField: {fileID: 1932070652}
-  BuyPanel: {fileID: 2084848875}
+  _buyPanel: {fileID: 2084848875}
 --- !u!1 &987153478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,7 +4899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd53b67f84d07947ab71d95f5a03956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textCoins: {fileID: 1237493457}
+  _textCoins: {fileID: 1237493457}
   coins: 0
   _saveManager: {fileID: 1231730256}
 --- !u!114 &1231730256
@@ -4917,6 +4917,7 @@ MonoBehaviour:
   _playerStats:
     _unlockedLevelsCount: 0
     _coinsAmmount: 0
+    _activeSkinId: 0
     _skinsAvailable: 
 --- !u!114 &1231730257
 MonoBehaviour:
@@ -4986,8 +4987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142.05, y: -2.1682}
-  m_SizeDelta: {x: 786.7, y: 261.66}
+  m_AnchoredPosition: {x: 151.15224, y: -2.1682}
+  m_SizeDelta: {x: 768.4955, y: 261.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237493457
 MonoBehaviour:
@@ -5197,7 +5198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -610}
+  m_AnchoredPosition: {x: 225, y: -730}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290166194
@@ -5679,7 +5680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -1060}
+  m_AnchoredPosition: {x: 225, y: -1180}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1391206205
@@ -5741,11 +5742,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1391206205}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5930,7 +5931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 925, y: -1060}
+  m_AnchoredPosition: {x: 925, y: -1180}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464511184
@@ -5992,11 +5993,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1464511184}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6155,7 +6156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 750, y: -610}
+  m_AnchoredPosition: {x: 750, y: -730}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496728193
@@ -6217,11 +6218,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1496728193}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6301,7 +6302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 575, y: -610}
+  m_AnchoredPosition: {x: 575, y: -730}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562917271
@@ -6447,7 +6448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -610}
+  m_AnchoredPosition: {x: 400, y: -730}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580481142
@@ -6894,7 +6895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -1285}
+  m_AnchoredPosition: {x: 225, y: -1405}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667508469
@@ -6956,11 +6957,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1667508469}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 16
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7040,7 +7041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 750, y: -835}
+  m_AnchoredPosition: {x: 750, y: -955}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1708154663
@@ -7102,11 +7103,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1708154663}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7186,7 +7187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 925, y: -835}
+  m_AnchoredPosition: {x: 925, y: -955}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719792294
@@ -7248,11 +7249,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1719792294}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7407,7 +7408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 750, y: -1060}
+  m_AnchoredPosition: {x: 750, y: -1180}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827545847
@@ -7469,11 +7470,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1827545847}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7705,7 +7706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 575, y: -835}
+  m_AnchoredPosition: {x: 575, y: -955}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943254948
@@ -7767,11 +7768,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1943254948}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8146,8 +8147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.025391, y: -0.00036662}
-  m_SizeDelta: {x: 3.1673, y: 5.6305}
+  m_AnchoredPosition: {x: -0.025391, y: -3.9996}
+  m_SizeDelta: {x: 3.1673, y: 6.3108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2071439385
 GameObject:
@@ -8489,7 +8490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -1510}
+  m_AnchoredPosition: {x: 225, y: -1630}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2123803210
@@ -8529,7 +8530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 925, y: -1285}
+  m_AnchoredPosition: {x: 925, y: -1405}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123803212
@@ -8591,11 +8592,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2123803212}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OpenGameScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 20
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8687,7 +8688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4013910573730479184, guid: 6139d30bedcfddd479d878a6e94cb5dd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -9.000244
+      value: -0.00012207
       objectReference: {fileID: 0}
     - target: {fileID: 4013910573730479184, guid: 6139d30bedcfddd479d878a6e94cb5dd, type: 3}
       propertyPath: m_SizeDelta.y
@@ -8723,7 +8724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4013910573730479184, guid: 6139d30bedcfddd479d878a6e94cb5dd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.5
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 4013910573730479184, guid: 6139d30bedcfddd479d878a6e94cb5dd, type: 3}
       propertyPath: m_AnchoredPosition.y
