@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using static UnityEngine.Networking.UnityWebRequest;
 
 public class CoinManager : Singleton<CoinManager>
 {
