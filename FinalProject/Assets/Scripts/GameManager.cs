@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static ShopManager;
@@ -26,8 +27,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private LevelManager _levelManager;
 
-    //[SerializeField]
-    //private SceneManager _sceneManager;
+    [SerializeField]
+    private TMP_Text _textLevelCompliteCoins;
 
     [SerializeField]
     private CoinManager _coinManager;
@@ -50,7 +51,7 @@ public class GameManager : Singleton<GameManager>
     private int _gameGuess = 0;
     private int _countCorrectGuess;
     private static int _coins;
-    private int _difficulty;
+    public int difficulty;
     private string firstGuess, secondGuess;
 
     private Skin _skinData;
@@ -63,8 +64,8 @@ public class GameManager : Singleton<GameManager>
     {
         InterstitialAd.Instance.LoadAd();
         RewardedAds.Instance.LoadAd();
-        _difficulty = _saveManager.PlayerStats.UnlockedLevelsCount;
-        CreateField(_difficulty);
+        //_difficulty = _saveManager.PlayerStats.UnlockedLevelsCount;
+        CreateField();
         GetCards();
         AddListeners();
         AddCardFaces();
@@ -73,7 +74,7 @@ public class GameManager : Singleton<GameManager>
         _activeSkinId = _saveManager.PlayerStats.ActiveSkinId;
     }
 
-    private void CreateField(int difficulty)
+    private void CreateField()
     {
         var currentDifficulty = difficulty % 2 == 0 ? difficulty : difficulty - 1;
         if (currentDifficulty < 4)
@@ -207,7 +208,7 @@ public class GameManager : Singleton<GameManager>
         if (_countCorrectGuess == _gameGuess)
         {
             _levelCompliteMenu.SetActive(true);
-
+            _textLevelCompliteCoins.text = "100";
             _coinManager.SaveCoins(100);
             _saveManager.PlayerStats.UnlockedLevelsCount++;
             _levelManager.RecalculateUnlockLevels();

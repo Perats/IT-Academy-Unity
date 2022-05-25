@@ -28,4 +28,9 @@ public class LevelManager : MonoBehaviour
             lockImage.SetActive(true);
         }
     }
+
+    public void LevelNumber(int clickedLevel)
+    {
+        GameManager.Instance.difficulty = clickedLevel;
+    }
 }

@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 4731219
   _iOSGameId: 4731218
-  _testMode: 1
+  _testMode: 0
 --- !u!4 &793544634
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,11 +2879,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6a50ecfa8624f984c821739f8cba5a4b, type: 3}
   _saveManager: {fileID: 1374880385}
   _levelManager: {fileID: 1374880387}
+  _textLevelCompliteCoins: {fileID: 1762203750}
   _coinManager: {fileID: 1374880386}
   _cardField: {fileID: 1314370944}
   _card: {fileID: 8236518211760755169, guid: 4b21335a229e94140849e9ea7ef70d75, type: 3}
   gamePuzzles: []
   cards: []
+  difficulty: 0
 --- !u!114 &1374880381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3976,11 +3978,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1594601329}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 334.11285, y: 0.0006542206}
+  m_AnchoredPosition: {x: 342, y: 106}
   m_SizeDelta: {x: 518.9559, y: 175.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762203750
@@ -4037,8 +4039,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
