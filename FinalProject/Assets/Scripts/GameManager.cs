@@ -53,6 +53,7 @@ public class GameManager : Singleton<GameManager>
     private static int _coins;
     public int difficulty;
     private string firstGuess, secondGuess;
+    private string _rewardCoins = "100";
 
     private Skin _skinData;
     void Awake()
@@ -208,7 +209,7 @@ public class GameManager : Singleton<GameManager>
         if (_countCorrectGuess == _gameGuess)
         {
             _levelCompliteMenu.SetActive(true);
-            _textLevelCompliteCoins.text = "100";
+            _textLevelCompliteCoins.text = _rewardCoins;
             _coinManager.SaveCoins(100);
             _saveManager.PlayerStats.UnlockedLevelsCount++;
             _levelManager.RecalculateUnlockLevels();

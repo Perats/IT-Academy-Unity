@@ -2353,7 +2353,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1374880384}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneManager, TestAssembly
         m_MethodName: OpenNextScene
         m_Mode: 1
         m_Arguments:
